@@ -1,13 +1,13 @@
 import { decorate, observable, action } from "mobx";
 
 export default class PageNav {
-  page = "home";
-  homeActive = "active";
+  page = "about";
+  homeActive = "";
   compActive = "";
   comp1Active = "";
   comp2Active = "";
   comp3Active = "";
-  aboutActive = "";
+  aboutActive = "active";
   contactActive = "";
 
   setPage(page) {
@@ -34,6 +34,15 @@ export default class PageNav {
         this.comp2Active = "";
         this.comp3Active = "";
         this.aboutActive = "";
+        this.contactActive = "";
+        break;
+      case "about":
+        this.homeActive = "";
+        this.compActive = "";
+        this.comp1Active = "";
+        this.comp2Active = "";
+        this.comp3Active = "";
+        this.aboutActive = "active";
         this.contactActive = "";
         break;
       default:
