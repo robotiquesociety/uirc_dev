@@ -1,0 +1,11 @@
+React + Mobx + Firebase
+https://www.robinwieruch.de/react-firebase-mobx-tutorial/
+
+Mobx + React Context
+https://stackoverflow.com/questions/54263228/access-stores-from-class-using-mobx-and-react-context
+
+Mobx doc1
+https://mobx.js.org/refguide/modifiers.html
+
+Mobx doc2
+https://github.com/mobxjs/mobx-react

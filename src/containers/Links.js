@@ -8,6 +8,7 @@ import Robocombat from "./Robocombat";
 import mainBG from "../images/mainBG.jpg";
 import { FaRegCopyright } from "react-icons/fa";
 import "./Links.css";
+import store from '../stores/index.js';
 
 export default class Links extends React.Component {
   constructor(props) {
@@ -15,7 +16,6 @@ export default class Links extends React.Component {
     this.gotoHome = this.gotoHome.bind(this);
     this.gotoCombat = this.gotoCombat.bind(this);
     this.state = {
-      page: "home",
       homeActive: "active",
       compActive: "",
       comp1Active: "",
@@ -27,8 +27,8 @@ export default class Links extends React.Component {
   }
 
   gotoHome() {
+      store.pageNav.setPage("home");
     this.setState({
-      page: "home",
       homeActive: "active",
       compActive: "",
       comp1Active: "",
@@ -40,8 +40,8 @@ export default class Links extends React.Component {
   }
 
   gotoCombat() {
+    store.pageNav.setPage("robocombat");
     this.setState({
-      page: "robocombat",
       homeActive: "",
       compActive: "active",
       comp1Active: "active",
@@ -53,15 +53,16 @@ export default class Links extends React.Component {
   }
 
   render() {
-    const page = this.state.page;
+    const page = store.pageNav;
     let link;
 
-    switch (page) {
+    switch (page.page) {
       case "home":
         link = <Mainpage />;
         break;
       case "robocombat":
         link = <Robocombat />;
+        break;
       default:
         break;
     }
@@ -82,15 +83,15 @@ export default class Links extends React.Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto" />
             <Nav>
-              <Nav.Link onClick={this.gotoHome} className={this.state.homeActive}>
+              <Nav.Link onClick={this.gotoHome} className={page.homeActive}>
                 Home
               </Nav.Link>
               <NavDropdown
                 title="2019 Competitions"
                 id="collasible-nav-dropdown"
-                className={this.state.compActive}
+                className={page.compActive}
               >
-                <NavDropdown.Item onClick={this.gotoCombat} className={this.state.comp1Active}>
+                <NavDropdown.Item onClick={this.gotoCombat} className={page.comp1Active}>
                   Robot Combat
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
