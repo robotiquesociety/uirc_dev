@@ -3,14 +3,16 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Mainpage from "./Mainpage";
-import Robocombat from "./Robocombat";
-import mainBG from "../images/mainBG.jpg";
+import Mainpage from "../containers/Mainpage";
+import Robocombat from "../containers/Robocombat";
 import { FaRegCopyright } from "react-icons/fa";
 import "./Links.css";
 import store from "../stores/index.js";
 import { observer } from "mobx-react";
-import AboutUs from "./AboutUs";
+import AboutUs from "../containers/AboutUs";
+import Accomodation from "../containers/Accomodation";
+import LineFollow from "../containers/LineFollow";
+import EngChallenge from "../containers/EngChallenge";
 
 const Links = observer(
   class Links extends React.Component {
@@ -18,6 +20,9 @@ const Links = observer(
       super(props);
       this.gotoHome = this.gotoHome.bind(this);
       this.gotoCombat = this.gotoCombat.bind(this);
+      this.gotoLifo = this.gotoLifo.bind(this);
+      this.gotoEngChallenge = this.gotoEngChallenge.bind(this);
+      this.gotoAccom = this.gotoAccom.bind(this);
       this.gotoAbout = this.gotoAbout.bind(this);
     }
 
@@ -29,8 +34,20 @@ const Links = observer(
       store.pageNav.setPage("robocombat");
     }
 
+    gotoLifo() {
+      store.pageNav.setPage("lifo");
+    }
+
+    gotoEngChallenge() {
+      store.pageNav.setPage("engc");
+    }
+
     gotoAbout() {
       store.pageNav.setPage("about");
+    }
+
+    gotoAccom() {
+      store.pageNav.setPage("accomodation");
     }
 
     render() {
@@ -43,6 +60,15 @@ const Links = observer(
           break;
         case "robocombat":
           link = <Robocombat />;
+          break;
+        case "lifo":
+          link = <LineFollow />;
+          break;
+          case "engc":
+            link = <EngChallenge />;
+            break;
+        case "accomodation":
+          link = <Accomodation />;
           break;
         case "about":
           link = <AboutUs />;
@@ -81,23 +107,28 @@ const Links = observer(
                   >
                     Robot Combat
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
+                  <NavDropdown.Item
+                    onClick={this.gotoLifo}
+                    className={page.comp2Active}
+                  >
                     Line Following
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                  <NavDropdown.Item onClick={this.gotoEngChallenge}
+                    className={page.comp3Active}>
                     Engineering Challenge
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link>Schedule</Nav.Link>
-                <Nav.Link>Accomodation</Nav.Link>
-                <Nav.Link onClick={this.gotoAbout}>About Us</Nav.Link>
-                <Nav.Link href="#deets">Contact Us</Nav.Link>
+                <Nav.Link onClick={this.gotoAccom} className={page.accomActive}>
+                  Accomodation
+                </Nav.Link>
+                <Nav.Link onClick={this.gotoAbout} className={page.aboutActive}>
+                  About Us
+                </Nav.Link>
+                <Nav.Link>Contact Us</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <Container fluid>
-            <img src={mainBG} className="poster-img" alt="poster" />
-          </Container>
           {link}
           <br />
           <Container fluid className="footer">

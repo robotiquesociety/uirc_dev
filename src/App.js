@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import Links from "./containers/Links.js";
+import Links from "./components/Links.js";
 import store from "./stores/index.js";
 
 const GlobalStore = createContext(store);

@@ -1,13 +1,14 @@
 import { decorate, observable, action } from "mobx";
 
 export default class PageNav {
-  page = "about";
-  homeActive = "";
+  page = "home";
+  homeActive = "active";
   compActive = "";
   comp1Active = "";
   comp2Active = "";
   comp3Active = "";
-  aboutActive = "active";
+  accomActive = "";
+  aboutActive = "";
   contactActive = "";
 
   setPage(page) {
@@ -24,6 +25,7 @@ export default class PageNav {
         this.comp1Active = "";
         this.comp2Active = "";
         this.comp3Active = "";
+        this.accomActive = "";
         this.aboutActive = "";
         this.contactActive = "";
         break;
@@ -33,15 +35,47 @@ export default class PageNav {
         this.comp1Active = "active";
         this.comp2Active = "";
         this.comp3Active = "";
+        this.accomActive = "";
         this.aboutActive = "";
         this.contactActive = "";
         break;
+        case "lifo":
+          this.homeActive = "";
+          this.compActive = "active";
+          this.comp1Active = "";
+          this.comp2Active = "active";
+          this.comp3Active = "";
+          this.accomActive = "";
+          this.aboutActive = "";
+          this.contactActive = "";
+          break;
+          case "engc":
+            this.homeActive = "";
+            this.compActive = "active";
+            this.comp1Active = "";
+            this.comp2Active = "";
+            this.comp3Active = "active";
+            this.accomActive = "";
+            this.aboutActive = "";
+            this.contactActive = "";
+            break;
+        case "accomodation":
+          this.homeActive = "";
+          this.compActive = "";
+          this.comp1Active = "";
+          this.comp2Active = "";
+          this.comp3Active = "";
+          this.accomActive = "active";
+          this.aboutActive = "";
+          this.contactActive = "";
+          break;
       case "about":
         this.homeActive = "";
         this.compActive = "";
         this.comp1Active = "";
         this.comp2Active = "";
         this.comp3Active = "";
+        this.accomActive = "";
         this.aboutActive = "active";
         this.contactActive = "";
         break;

@@ -12,3 +12,6 @@ https://github.com/mobxjs/mobx-react
 
 Open Gmap in native app from browser
 https://medium.com/@colinlord/opening-native-map-apps-from-the-mobile-browser-afd66fbbb8a4
+
+Create component with children
+https://reactjs.org/docs/composition-vs-inheritance.html

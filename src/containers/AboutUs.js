@@ -4,20 +4,19 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import Carousel from "react-bootstrap/Carousel";
-import robattle from "../images/robattle.jpg";
 import about from "../images/about.png";
 import cheamer from "../images/cheamer.jpg";
-import { FaWhatsapp } from "react-icons/fa";
 import "./AboutUs.css";
-import Gmap from "./Gmap.js";
+import Gmap from "../components/Gmap.js";
+import mainBG from "../images/engcBG.jpg";
+import TopBanner from "../components/TopBanner.js";
 
 export default class AboutUs extends React.Component {
   render() {
     return (
       <div className="aboutUs">
-        <br />
+      <TopBanner src={mainBG} title="robotique society" text="about us" />
+    <br />
         <Container fluid>
           <Row className="justify-content-md-center">
             <Col md="6" lg="6">
