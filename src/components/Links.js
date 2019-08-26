@@ -132,7 +132,7 @@ const Links = observer(
           {link}
           <br />
           <Container fluid className="footer">
-            <FaRegCopyright className="footer-icon" /> Robotique Society 2019
+            <FaRegCopyright className="footer-icon" /> Robotique Society 2019  syahmi-san production.
           </Container>
         </div>
       );

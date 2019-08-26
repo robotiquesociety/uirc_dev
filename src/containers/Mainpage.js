@@ -68,9 +68,9 @@ class Mainpage extends React.Component {
                         />
                       </Col>
                       <Col>
-                        <h3>Robattle</h3>
+                        <h3 className="editted-script">Robattle</h3>
                         <br />
-                        <p>Unleash the beast</p>
+                        <p className="editted-script-2">Unleash the beast</p>
                         <br />
                         <p>
                             Robot combat, a game where participants test their robot agility 
@@ -97,9 +97,9 @@ class Mainpage extends React.Component {
                         />
                       </Col>
                       <Col>
-                        <h3>Line Following</h3>
+                        <h3 className="editted-script">Line Following</h3>
                         <br />
-                        <p>Innovating the future</p>
+                        <p className="editted-script-2">Innovating the future</p>
                         <br />
                         <p>
                           Line following robot, the first step towards autonomous car. 
@@ -128,9 +128,9 @@ class Mainpage extends React.Component {
                         />
                       </Col>
                       <Col>
-                        <h3>Engineering Challenge</h3>
+                        <h3 className="editted-script">Engineering Challenge</h3>
                         <br />
-                        <p>Dream Big. Experience Bigger.</p>
+                        <p className="editted-script-2">Dream Big. Experience Bigger.</p>
                         <br />
                         <p>
                           Engineering Challenge is an innovation and creativity competition that is 
@@ -242,11 +242,7 @@ class Mainpage extends React.Component {
             </Col>
           </Row>
           <br />
-          <Row>
-            <Col>
-            SPONSOR
-            </Col>
-          </Row>
+
         </Container>
       </div>
     );
