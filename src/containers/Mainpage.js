@@ -9,6 +9,7 @@ import robattle from "../images/robattle.jpg";
 import mainBG from "../images/mainBG.jpg";
 import engcPic from "../images/engc4.jpeg";
 import TopBanner from "../components/TopBanner.js";
+import Countdown from "../components/Countdown.js";
 import "./Mainpage.css";
 import ListGroup from "react-bootstrap/ListGroup";
 import {
@@ -43,9 +44,12 @@ class Mainpage extends React.Component {
   }
 
   render() {
+    const currentDate = new Date();
+    const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
     return (
       <div>
         <TopBanner src={mainBG} />
+        <Countdown date={`${year}-12-24T00:00:00`} />
         <br />
         <Container fluid>
           <Row className="justify-content-md-center">
