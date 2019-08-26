@@ -68,7 +68,14 @@ class Mainpage extends React.Component {
                       <Col>
                         <h3>Robattle</h3>
                         <br />
-                        <p>UniKL Ro-Battle Competition aims to create awareness and interest in robotics technology as well as create a platform for various people especially the students to be involved in a more hands-on and practical aspect in engineering and technology through robotics...</p>
+                        <p>Unleash the beast</p>
+                        <br />
+                        <p>
+                            Robot combat, a game where participants test their robot agility 
+                            and durability to reach the objectives while withstanding the heavy blow of their opponent.
+                            Does your robot satisfy that criteria? Show us what you and your robot(s) are capable off 
+                            by winning the game. We await your accomplishments.
+                        </p>
                         <Button variant="primary" onClick={this.gotoCombat}>More Informations...</Button>
                       </Col>
                     </Row>
@@ -90,10 +97,16 @@ class Mainpage extends React.Component {
                       <Col>
                         <h3>Line Following</h3>
                         <br />
-                        <p>A Robotic Line Follower Competition will be held in UniKL
-                      MFI on 2nd until 3rd November 2019. There will be school
-                      category and open category. Don't miss this chance to test
-                      your understanding in line following robot...</p>
+                        <p>Innovating the future</p>
+                        <br />
+                        <p>
+                          Line following robot, the first step towards autonomous car. 
+                          A robot that follows the designated path to reach its objectives. 
+                          Are you capable of making the fastest line follow robot? 
+                          Prove your skill now! Participate and claim your title as the best. 
+                          Challenge your knowledge in mechanical, programming and Critical Thinking skills. 
+                          We await your achievements.
+                        </p>
                         <Button variant="primary" onClick={this.gotoLifo}>More Informations...</Button>
                       </Col>
                     </Row>
@@ -115,12 +128,13 @@ class Mainpage extends React.Component {
                       <Col>
                         <h3>Engineering Challenge</h3>
                         <br />
+                        <p>Dream Big. Experience Bigger.</p>
+                        <br />
                         <p>
-                          UniKL MFI Engineering Challenge is an innovation and
-                          creativity competition that is created for the primary
-                          and secondary school students. In this challenge,
-                          students are tasked to solve engineering related
-                          challenges...
+                          Engineering Challenge is an innovation and creativity competition that is 
+                          created to test the ability of participants to solve engineering related challenges. 
+                          Test your limit as an engineer and improve yourself. Think outside the box?  
+                          No! Think outside this world. Participate now and claim your position on the seat of GREATNESS. Surprise Us!
                         </p>
                         <Button variant="primary" onClick={this.gotoEngChallenge}>More Informations...</Button>
                       </Col>
