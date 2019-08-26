@@ -49,7 +49,9 @@ class Mainpage extends React.Component {
     return (
       <div>
         <TopBanner src={mainBG} />
-        <Countdown date={`${year}-12-24T00:00:00`} />
+        {/* https://savvytime.com/converter/utc-to-myt/nov-2-2019/3am */}
+        {/* https://www.w3schools.com/js/js_date_formats.asp */}
+        <Countdown date={`${year}-11-02T00:00:00Z`} />
         <br />
         <Container fluid>
           <Row className="justify-content-md-center">
